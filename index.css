@@ -191,7 +191,7 @@ video{
   text-align: center;
 }
 .step_item>p {
-  margin: 55px 0 60px;
+  margin: 55px 0 24px;
 }
 .step_img{
   width: 390px;
@@ -224,7 +224,6 @@ width: 382px;
 }
 .one>.step_img {
   position: relative;
-  left: -10px;
 }
 
 .two{
@@ -240,11 +239,11 @@ max-height: 719px;
   max-width: 392px;
 }
 .two>.step_img{
-margin-left: -8px;
+
 }
 .number_two {
 position: relative;
-top: -872px;
+top: -824px;
 left: -5px;
 }
 .three{
@@ -259,9 +258,7 @@ padding-left: 51px;
   line-height: 150%;
   width: 438px;
 }
-.three>.step_img{
-margin-left: 9px;
-}
+
 .number_three {
   position: absolute;
   top: -126px;
@@ -288,7 +285,7 @@ margin-left: 9px;
   margin: 0 auto;
 }
 .video_left,.video_right{
-flex: 1 1 100%; /* Каждый блок занимает 100% на мобильных */
+
 } 
 .video_left {
   max-width: 580px;
@@ -338,7 +335,6 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
   border-radius: 10px;
  max-width: 896px;
  width: 100%;
- max-height: 515px;
  height: 100%;
  object-fit: contain;
 
@@ -360,18 +356,20 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
   border-radius: 10px;
 } */
 .Kayla {
-  position: absolute;
-  z-index: 97;
-     max-width: 896px;
+ position: absolute;
+ z-index: 97;
+ max-width: 896px;
+ border-radius: 10px;
  width: 100%;
  max-height: 515px;
  height: 100%;
  object-fit: contain;
 }
 .black {
-    position: absolute;
-   z-index: 98;
-   max-width: 896px;
+ position: absolute;
+ z-index: 98;
+ max-width: 896px;
+ border-radius: 10px;
  width: 100%;
  max-height: 515px;
  height: 100%;
@@ -389,13 +387,36 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
 }
 .product_image {
   position: relative;
+  max-width: 700px;
+  width: 100%;
+  
 }
-.product_image1 {
+.product_image1{
+     max-width: 638px;
+   width: 100%;
+   max-height: 573px;
+   height: 100%;
+  object-fit: contain;
+}
+/* .product_image1 {
   width: 638px;
   height: 573px;
    z-index: 98;
+} */
+.product_image2{
+    position: absolute;
+   top: 67%;   /* 20 % от высоты родителя */
+  left: -15%;   /* 5 % от ширины родителя */
+   max-width: 296px;
+   width: 100%;
+  max-height: 293px;
+  height: auto;
+   z-index: 99;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);;
+  border-radius: 5px;
+  object-fit: contain;
 }
-.product_image2 {
+/* .product_image2 {
   position: absolute;
   top:357px;
   left:-77px;
@@ -404,7 +425,7 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
   z-index: 99;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);;
   border-radius: 5px;
-}
+} */
 .product_title {
   max-width: 583px;
 }
@@ -516,14 +537,25 @@ background-color: #245852;
 }
 }
 @media (max-width:1330px){
-.video{
+.video_right{
  
+}
+.video{
+    object-fit: cover;
   }
 .Kayla{
-
+       object-fit: cover;
 }
 .black{
-
+       object-fit: cover;
+}
+.product_image{
+}
+.product_image1{
+   
+}
+.product_image2{
+  
 }
 }
 @media (max-width:1136px){
@@ -569,10 +601,22 @@ background-color: #245852;
 
 
 }
-@media (max-width:990px){
+@media (max-width:785px){
+  body{
+    font-size: 15px;
+  }
+  .Alivio_nav{
+  
+  }
+  .nav{
+    flex-wrap: wrap;
+  }
+  .nav>ul{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
     .container{
       max-width: 700px;
       padding: 0 50px;
   }
-
 }
