@@ -317,10 +317,10 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
     border-radius: 5px;
 }
 .video_right {
-   position: relative;
+  position: relative;
    width: 100%; 
    max-width: 896px;
-   height: auto;
+   min-height: 515px;
    
 }
 /* .video {
@@ -333,13 +333,15 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
       object-fit: contain;
 } */
 .video{
-  position: relative;
+  position: absolute;
   z-index: 99;
-  top: 520px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 896px;
-  height: auto;
+ max-width: 896px;
+ width: 100%;
+ max-height: 515px;
+ height: 100%;
+ object-fit: contain;
+
 
 }
 /* .Kayla {
@@ -361,15 +363,20 @@ flex: 1 1 100%; /* Каждый блок занимает 100% на мобиль
 .Kayla {
   position: absolute;
   z-index: 97;
-    width: 100%;
-    height: auto;
+     max-width: 896px;
+ width: 100%;
+ max-height: 515px;
+ height: 100%;
+ object-fit: contain;
 }
 .black {
     position: absolute;
-     position: relative;
    z-index: 98;
-    width: 100%;
-    height: auto;
+   max-width: 896px;
+ width: 100%;
+ max-height: 515px;
+ height: 100%;
+ object-fit: contain;
 }
 
 
@@ -466,9 +473,6 @@ background-color: #245852;
 }
 
 @media (max-width:1900px){
-  .container{
-
-  }
   .Steps_main{
       height: 100%; /* Задаем высоту родителя */
   }
@@ -492,10 +496,9 @@ background-color: #245852;
   flex-wrap: wrap-reverse;
 }
 .video{
-  max-width: 100%; /* Ограничение для планшетов */
-   height: auto; /* Сохранение пропорций */
-    margin: 0 auto; /* Центрирование */ 
-    top: 522px;
+  width: 100%;
+  height: auto;
+  top: 365px;
 }
 .video_left{
   text-align: center;
