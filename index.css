@@ -26,14 +26,14 @@ a {
   display: block;
 }
 img{
-  display: block;
+ 
 }
 video{
   margin: 0;
   padding: 0;
 }
 .Alivio_main {
-
+padding-top: 10px;
 }
 .Alivio_nav {
  
@@ -44,18 +44,22 @@ video{
   margin: 0 auto;
 }
 .nav {
-  padding: 30px 0;
   display: flex;
+   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .nav>ul {
   display: flex;
-  gap: 72px;
+   gap: 72px;
+   padding-left: 0;
+  align-items: center;
+   white-space: nowrap;
   color: #292929;
-  margin-left:-150px;
+  /* margin-left:-150px; */
   
 }
+
 .nav>ul>li {
   margin-top: 1px;
 }
@@ -65,24 +69,25 @@ video{
 
 }
 .logo {
-  margin-left: -1px;
+
 }
 .buttons {
   display: flex;
+  align-items: center;
+    flex-wrap: wrap;
   justify-content: space-between;
   max-width: 285px;
+  gap:36px ;
 }
 .btn1 {
-  margin-left: 1px;
-  margin-right: 36px;
-  padding: 13px 0;
   color: #000;
 }
 .btn2 {
   color: #fff;
   background-color: #01996D;
-  padding: 14px 49px;
-    line-height: 25px;
+    margin: 17px 0;
+  padding: 14px 50px;
+  line-height: 25px;
 }
 
 
@@ -194,20 +199,25 @@ video{
   margin: 55px 0 24px;
 }
 .step_img{
-  width: 390px;
-  height: 492px;
+max-width: 390px;
+width: 100%;
+object-fit: contain;
+
 
 }
 .rectangle{
-max-width: 375px;
+max-width: 390px;
+width: 100%;
 margin: 0 auto;
 }
 
 .website {
   position: absolute;
-  top: 219px;
-  left: 206px;
-  width: 177px;
+  top: 47%;
+  left: 55%;
+  max-width: 45%;
+  width: 100%;
+  object-fit: contain;
   border-radius: 5px 0px 0px 5px;
 }
 .number_one{
@@ -219,7 +229,7 @@ left:-7px;
   max-height: 802px;
 }
 .one>p{
-width: 382px;
+max-width: 382px;
  line-height: 30px;
 }
 .one>.step_img {
@@ -239,11 +249,17 @@ max-height: 719px;
   max-width: 392px;
 }
 .two>.step_img{
-
+ position: relative;
+}
+.book{
+max-width: 390px;
+width: 100%;
+margin: 0 auto;
+object-fit: contain;
 }
 .number_two {
 position: relative;
-top: -824px;
+top: -830px;
 left: -5px;
 }
 .three{
@@ -256,9 +272,14 @@ padding-left: 51px;
 .three>p{
   margin-left: 2px;
   line-height: 150%;
-  width: 438px;
+  max-width: 405px;
 }
-
+.face{
+max-width: 390px;
+width: 100%;
+margin: 0 auto;
+object-fit: contain;
+}
 .number_three {
   position: absolute;
   top: -126px;
@@ -273,7 +294,7 @@ padding-left: 51px;
 
 .Alivio_video {
   background-color: #245852;
-  min-height: 922px;
+  margin: 0 auto;
 }
 
 .video_main {
@@ -281,7 +302,7 @@ padding-left: 51px;
   justify-content: center;
   gap: 30px;
   align-items: center;
-  padding: 230px 207px 177px;
+  padding: 230px 0 177px;
   margin: 0 auto;
 }
 .video_left,.video_right{
@@ -316,54 +337,53 @@ padding-left: 51px;
 .video_right {
   position: relative;
    width: 100%; 
-   max-width: 896px;
-   min-height: 515px;
-   
+   max-width: 896px; /* мягкое ограничение */
+  margin: 0 auto; /* центрируем */
+    min-height: 515px;
 }
-/* .video {
-    position: relative;
-    top: 1px;
-    z-index: 99;
-    height: 515px;
-    width: 896px;
-     border-radius: 10px;
-      object-fit: contain;
-} */
-.video{
+/* .video{
   position: absolute;
+  display: block;
+  top: 1px;
   z-index: 99;
   border-radius: 10px;
- max-width: 896px;
- width: 100%;
- height: 100%;
- object-fit: contain;
+  max-width: 100%;
+ height: auto;
+ max-height: 100%;
+ 
+} */
+.video,
+.Kayla,
+.black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
+.video {
+  z-index: 99; /* видео поверх всех */
+}
+
+.black {
+  z-index: 98; /* чёрный слой под видео, но над .Kayla */
+}
+
+.Kayla {
+  z-index: 97; /* картинка снизу */
 }
 /* .Kayla {
-  position: absolute;
-   top: 1px;
-  height: 515px;
-   width: 896px;
-  z-index:97;
-  border-radius: 10px;
-}
-.black {
-    position: absolute;
-    top: 1px;
-      z-index: 98;
-      height: 515px;
-   width: 896px;
-  border-radius: 10px;
-} */
-.Kayla {
  position: absolute;
  z-index: 97;
  max-width: 896px;
  border-radius: 10px;
  width: 100%;
- max-height: 515px;
- height: 100%;
+ height: auto;
+ max-height: 100%;
  object-fit: contain;
+
 }
 .black {
  position: absolute;
@@ -371,10 +391,10 @@ padding-left: 51px;
  max-width: 896px;
  border-radius: 10px;
  width: 100%;
- max-height: 515px;
- height: 100%;
- object-fit: contain;
-}
+ height: auto;
+ max-height: 100%;
+ min-width: 388px;
+} */
 
 
 
@@ -389,13 +409,12 @@ padding-left: 51px;
   position: relative;
   max-width: 700px;
   width: 100%;
-  
+  margin: 0 auto;
 }
 .product_image1{
-     max-width: 638px;
+    max-width: 638px;
    width: 100%;
-   max-height: 573px;
-   height: 100%;
+   height: auto;
   object-fit: contain;
 }
 /* .product_image1 {
@@ -404,13 +423,11 @@ padding-left: 51px;
    z-index: 98;
 } */
 .product_image2{
-    position: absolute;
-   top: 67%;   /* 20 % от высоты родителя */
+  position: absolute;
+  top: 67%;   /* 20 % от высоты родителя */
   left: -15%;   /* 5 % от ширины родителя */
-   max-width: 296px;
-   width: 100%;
-  max-height: 293px;
-  height: auto;
+  max-width: 296px;
+  width: 40%;
    z-index: 99;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);;
   border-radius: 5px;
@@ -447,7 +464,7 @@ padding-left: 51px;
    background-color: #01996D;
    border-radius: 4px;
    color: #fff;
-   width: 228px;
+   max-width: 228px;
    padding: 20px 50px;
 }
 
@@ -492,7 +509,14 @@ background-color: #245852;
     width: 121px;
 }
 
-@media (max-width:1900px){
+@media (max-width:1805px){
+  .nav>ul {
+  gap:50px ;
+  }
+  .btn2 {
+  padding: 14px 24px;
+}
+
   .Steps_main{
       height: 100%; /* Задаем высоту родителя */
   }
@@ -536,7 +560,16 @@ background-color: #245852;
   align-items: center;
 }
 }
-@media (max-width:1330px){
+@media (max-width:1450px){
+body{
+     font-size: 18px;
+}
+.nav{
+  
+}
+.nav>ul {
+  gap: 15px;
+}
 .video_right{
  
 }
@@ -558,25 +591,40 @@ background-color: #245852;
   
 }
 }
+@media (max-width:1205px){
+  .container{
+    padding: 0 230px;
+  }
+   .hero_title>h1,.step_left>h2,.step_item>h3,.video_left>h2,.product_title>h2,h3{
+   font-size: 35px;
+  }
+.nav{
+  column-gap: 10px;
+  justify-content: center;
+}
+
+}
 @media (max-width:1136px){
   body{
     font-size: 18px;
   }
   
   .nav{
-    justify-content: center;
+    
   }
 .btn1 {
-  margin-left: 20px;
-  padding-top: 18px;
+  
 }
   .hero_title>h1,.step_left>h2,.step_item>h3,.video_left>h2,.product_title>h2,h3{
-   font-size: 35px;
+   font-size: 25px;
+  }
+  .step_left>p{
+    font-size: 25px;
   }
    .container{
-      max-width: 1000px;
+      /* max-width: 1000px; */
       padding: 0 100px;
-  }
+   }
    .hero{
     background-size: none;/* Изображение будет масштабироваться, сохраняя пропорции */
     height: 50vh;
@@ -585,7 +633,7 @@ background-color: #245852;
     padding-top:30px ;
   }
 .nav>ul {
-  gap: 20px;
+  gap: 10px;
   margin-left: 0;
 }
 .Steps_main{
@@ -596,27 +644,62 @@ background-color: #245852;
   margin: 0 auto;
 }
 .step_item>h3{
-  width: 365px;
+  max-width: 365px;
 }
 
 
 }
-@media (max-width:785px){
+@media (max-width:870px){
   body{
     font-size: 15px;
   }
-  .Alivio_nav{
-  
+    .container{
+      /* max-width: 700px; */
+      padding: 0 20px;
+  }
+.hero_title>h1,.step_left>h2,.step_item>h3,.video_left>h2,.product_title>h2,h3{
+   font-size: 20px;
   }
   .nav{
     flex-wrap: wrap;
+    margin: 0 auto;
   }
-  .nav>ul{
-    padding-left: 10px;
-    padding-right: 10px;
+  .nav li:last-child{
+    margin-right:0 ;
+    align-items: center;
   }
-    .container{
-      max-width: 700px;
-      padding: 0 50px;
+  .step_left{
+    min-height: 0;
+  }
+  .step_right>p{
+    margin-top: 0;
+  }
+  .two>p{
+   margin-bottom: 89px;
+  }
+  .number_two{
+    top: -860px;
+  }
+}
+@media (max-width:631px){
+.nav{
+    flex-direction: column; /* все элементы в столбец */
+}
+  .logo {
+    order:1; /* логотип — первый (наверху) */
+  }
+
+  ul {
+    order: 2; /* меню — второе (посередине) */
+    justify-content: center; /* центрируем пункты меню */
+  }
+
+  .buttons {
+    order: 3; /* кнопки — третьи (внизу) */
+    width: 100%; /* кнопки на всю ширину */
+    justify-content: center; /* центрируем кнопки внутри */
+  }
+  .video_left>h2{
+    font-size: 18px;
   }
 }
